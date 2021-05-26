@@ -1,0 +1,62 @@
+<h1>This is my Angular world</h1>
+
+<input type="text" [(ngModel)]="inputValue">
+
+<p><strong>{{inputValue}}</strong></p>
+<hr>
+<button (click)="number = number+1">ChangeBackground</button>
+<!--<div [ngStyle]="{-->
+<!--  width: '100px',-->
+<!--  height: '100px',-->
+<!--  borderRadius: '20px',-->
+<!--  border: '2px solid #ccc',-->
+<!--  backgroundColor: backgroundValue? 'red' : 'blue'-->
+<!--}"></div>-->
+
+<!--<p [ngClass]="{-->
+<!--  red: backgroundValue,-->
+<!--  blue: !backgroundValue-->
+<!--}">Lorem ipsum dolor sit amet.</p>-->
+
+<!--<p [class.red]="backgroundValue"-->
+<!--   [class.blue]="!backgroundValue"-->
+<!--&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+
+
+<!--<p *ngIf="backgroundValue else: blueP" class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, laboriosam!</p>-->
+<!--<ng-template #blueP>-->
+<!--  <p class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, sed?</p>-->
+<!--</ng-template>-->
+
+
+<!--<div [ngSwitch]="number">-->
+<!--  <p *ngSwitchCase="1" class="red">Lorem ipsum dolor.</p>-->
+<!--  <p *ngSwitchCase="2" class="blue">Lorem ipsum dolor sit.</p>-->
+<!--  <p *ngSwitchCase="3">Lorem ipsum dolor sit amet.</p>-->
+<!--  <p *ngSwitchDefault>default</p>-->
+<!--</div>-->
+
+<ul >
+  <li *ngFor="let i of arr; let idx = index">
+    <strong>{{idx + 1}}</strong> {{i}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let obj of objets">
+    name: {{obj.name}} surname: {{obj.surname}}
+    <ul>
+      <li *ngFor="let cars of obj.cars">
+        {{cars.marka}}
+        {{cars.model}}
+        {{cars.nomer}}
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+<app-post></app-post>
+<app-post></app-post>
+<app-post2></app-post2>
+

@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Angular Component</h1>
+  <app-post-form (onAdd)="onUpdateData($event)"></app-post-form>
+  <hr/>
+  <app-post *ngFor="let i of posts"
+    [Mypost]="i"
+  >
+    <div #info>
+        <small *ngIf="i.text.length > 10; else short">Пост длинный</small>
+        <ng-template #short>
+          <small>Пост короткий</small>
+        </ng-template>
+    </div>
+
+  </app-post>
+</div>
